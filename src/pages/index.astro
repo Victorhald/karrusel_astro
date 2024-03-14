@@ -1,5 +1,7 @@
 ---
-
+import Forside_om_os from "../components/Forside_om_os.astro";
+import Button from "../components/Button.astro";
+import Navigation from "../components/Navigation.astro";
 ---
 
 <html lang="en">
@@ -11,6 +13,11 @@
     <title>Astro</title>
   </head>
   <body>
+    <Navigation />
     <h1>Astro</h1>
+    <main>
+      <Forside_om_os />
+      <Button>Read more</Button>
+    </main>
   </body>
 </html>
