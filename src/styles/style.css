@@ -4,3 +4,118 @@
 img {
   width: 100%;
 }
+body {
+  background-color: grey;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  color: white;
+}
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+ul.menu {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  color: white;
+  margin-left: 300px;
+  z-index: 99;
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-item {
+  margin: 16px 0;
+}
+.nav-menu.active {
+  left: 0;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 35px;
+  overflow: hidden;
+  background-color: black;
+
+  height: 80px;
+}
+
+/* Div class udenom menu elementerne*/
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  z-index: 1;
+  position: fixed;
+  left: -100%;
+  top: 0px;
+
+  flex-direction: column;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* Fjerner list-style prikker*/
+li {
+  list-style: none;
+  margin: 10px;
+}
+/* Fjerner understregning på*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Links i nav-baren*/
+.navbar a {
+  float: left;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #d68c45;
+}
+
+/* Så links i dropdown er block, og derfor vises*/
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: black;
+}
