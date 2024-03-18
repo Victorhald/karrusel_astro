@@ -1,12 +1,22 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+html {
+  --font_color: rgba(243, 243, 243, 1);
+}
+
 img {
-  width: 100%;
+  display: block;
+  max-width: 100%;
   height: auto;
 }
 body {
-  background-color: grey;
+  /* background-color: grey; */
+  color: var(--font_color);
+  background-image: url(/public/background_img.webp);
+  background-repeat: no-repeat;
 }
 
 /* font og farver */
@@ -22,7 +32,8 @@ h3 {
   font-size: 1.3rem;
 }
 p {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  max-width: 65ch;
 }
 
 @media only screen and (min-width: 600px) {
