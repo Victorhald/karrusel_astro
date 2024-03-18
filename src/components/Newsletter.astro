@@ -1,5 +1,5 @@
 ---
-
+import Tickets from "./Tickets.astro";
 ---
 
 <h2>Newsletter</h2>
@@ -12,10 +12,15 @@
 <section>
   <h2>Style</h2>
   <p>We embrace all clothing styles. Feel free to embrace our circus rave-ish style, or show us your own take. Karrusel is harrasment & judgment free, so go crazy & be yourself.</p>
-  <img src="/" />
-  <img src="/" />
-  <img src="/" />
+  <div class="newsletter_grid_1">
+    <img src="/img/paula_billede.jpg" />
+    <div class="newsletter_grid_2">
+      <img src="/img/anders_billede.jpg" />
+      <img src="/img/elena_billede.jpg" />
+    </div>
+  </div>
 </section>
+<Tickets />
 <section>
   <h2>Our commitment</h2>
   <p>Our commitment has always been to create a festival that underlines our love for tech-style House & Disco, while welcoming everyone. We don’t care if it’s your first time or if you’re a die-hard tech lover - Bring love, and we will sort the rest.</p>
@@ -24,5 +29,18 @@
 <style>
   img {
     width: 100%;
+  }
+  h2 {
+    text-align: center;
+  }
+  .newsletter_grid_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 5px;
+  }
+  .newsletter_grid_1 {
+    display: grid;
+    gap: 5px;
   }
 </style>
