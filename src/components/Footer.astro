@@ -7,7 +7,7 @@
   <div class="form">
     <form>
       <input type="text" id="email" placeholder="E-mail" />
-      <input type="submit" value="submit" />
+      <input class="submit_btn" type="submit" value="submit" />
     </form>
   </div>
 
@@ -26,9 +26,24 @@
   .logo_footer {
     height: 60px;
   }
+  h3 {
+    text-align: center;
+  }
   form {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+    margin: 0 auto;
+  }
+  .submit_btn {
+    align-items: center;
+    text-align: center;
+    color: black;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .footer {
     display: flex;
@@ -37,5 +52,16 @@
   }
   .footer a:hover {
     color: blue;
+  }
+  input {
+    display: block;
+    color: black;
+    padding: 2px;
+    margin: 0 auto;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 </style>
