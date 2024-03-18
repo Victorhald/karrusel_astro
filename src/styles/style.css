@@ -2,10 +2,47 @@
   box-sizing: border-box;
 }
 img {
+  width: 100%;
+  height: auto;
 }
 body {
   background-color: grey;
 }
+
+/* font og farver */
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.3rem;
+}
+p {
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 11rem;
+  }
+
+  h2 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+/* --- */
+
 h1,
 h2,
 h3,
