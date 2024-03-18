@@ -1,6 +1,7 @@
 ---
 import "../styles/style.css";
 import Forside_om_os from "../components/Forside_om_os.astro";
+import Footer from "../components/Footer.astro";
 import Button from "../components/Button.astro";
 import Posters from "../components/Posters.astro";
 import Tickets from "../components/Tickets.astro";
@@ -21,16 +22,15 @@ import Burger from "../components/Burger.astro";
       <Burger />
     </header>
     <main>
-   
       <Forside_om_os />
       <Button>Read more</Button>
       <Tickets />
       <Posters>
-      <img src="/thursday-poster.webp" alt="Thursday program">
-      <img src="/friday-poster.webp" alt="Thursday program">
-      <img src="/saturday-poster.webp" alt="Thursday program">
+        <img src="/thursday-poster.webp" alt="Thursday program" />
+        <img src="/friday-poster.webp" alt="Thursday program" />
+        <img src="/saturday-poster.webp" alt="Thursday program" />
       </Posters>
-
+      <Footer />
     </main>
   </body>
 </html>
