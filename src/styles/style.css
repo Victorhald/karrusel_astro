@@ -1,37 +1,59 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+html {
+  --font_color: rgba(243, 243, 243, 1);
+  --headers_font: 
+  --p_font:
+}
+
 img {
-  width: 100%;
+  display: block;
+  max-width: 100%;
   height: auto;
 }
 body {
-  background-color: grey;
+  /* background-color: grey; */
+  color: var(--font_color);
+  background-image: url(/public/background_img.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
+
 
 /* font og farver */
 
 h1 {
   font-size: 3.5rem;
+  
 }
 
 h2 {
   font-size: 2.5rem;
+  text-transform: uppercase;
+  
 }
 h3 {
   font-size: 1.3rem;
 }
 p {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  max-width: 65ch;
 }
 
 @media only screen and (min-width: 600px) {
   h1 {
     font-size: 11rem;
+   
   }
 
   h2 {
-    font-size: 5rem;
+    font-size: 4rem;
+
   }
   h3 {
     font-size: 3rem;
@@ -100,9 +122,11 @@ ul.menu {
   padding: 0 24px;
   font-size: 35px;
   overflow: hidden;
-  background-color: black;
 
+  width: 100%;
   height: 80px;
+  z-index: 1;
+  position: fixed;
 }
 
 /* Div class udenom menu elementerne*/
@@ -115,7 +139,6 @@ ul.menu {
   position: fixed;
   left: -100%;
   top: 0px;
-
   flex-direction: column;
   background-color: black;
   width: 100%;
