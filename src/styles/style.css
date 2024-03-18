@@ -19,6 +19,13 @@ body {
   color: var(--font_color);
   background-image: url(/public/background_img.webp);
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+main{
+  position: relative;
 }
 
 /* font og farver */
