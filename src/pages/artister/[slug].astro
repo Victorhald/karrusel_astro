@@ -1,0 +1,44 @@
+---
+import Arrow from "../../components/Arrow.astro";
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://kemdlydyowtrowxxopgj.supabase.co/rest/v1/Karrusel",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtlbWRseWR5b3d0cm93eHhvcGdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjMyMDIsImV4cCI6MjAyNjMzOTIwMn0.m23hb_lr-l9cO0p8JuFmWXf9JyuhcfeYoV7rBGEU4wY",
+      },
+    }
+  ).then((response) => response.json());
+
+  return data.map((artist) => {
+    return {
+      params: { slug: artist.slug },
+      props: { myData: artist },
+    };
+  });
+}
+
+const { myData } = Astro.props;
+console.log(myData);
+
+// id: 5,
+//   created_at: '2024-03-18T12:42:02.882716+00:00',
+//   playing_date: '2024-08-25',
+//   artist: 'HAAI',
+//   scene: 'Manegen',
+//   time: 'TBA',
+//   spotify: null,
+//   image: 'haai-artist-card.jpg',
+//   description: 'The Australian-born, London-based DJ and producer, HAAi, will bring her frenetic energy and pounding bass to Karrusel this year. \n' +
+//     '\n' +
+//     'During the pandemic, HAAi put all of her energy into producing, mixing, and writing tracks. All this hard work resulted in her debut album ‘Baby, We’re Ascending’ released on Mute which presents you with tunes from hardcore, echoey beats to sweeping, colorful synth lines and bright, warped vocal samples. ',
+//   slug: 'Haai'
+// }
+---
+
+<h1>{myData.artist}</h1>
+<h2>{myData.playing_date}</h2>
+<h2>{myData.scene}</h2>
+<p>{myData.description}</p>

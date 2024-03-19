@@ -1,10 +1,24 @@
 ---
+import { isVNode } from "astro/jsx-runtime";
+
 const {data} = Astro.props;
-console.log(data);
+
 ---
-
+<a href={`artister/${data.slug}`}>
 <article>
-  <h2>{data.scene}</h2>
-  <p>{data.artist}</p>
+    {data ? (
+      <>
+        <p>{data.artist}</p>
+      </>
+    ) : (
+      <p>Loading...</p>
+    )}
+  </article>
+</a>
 
-</article>
+  <style>
+    article{
+      text-align: center;
+      font-size: 20rem;
+    }
+  </style> 

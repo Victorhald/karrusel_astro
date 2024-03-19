@@ -9,6 +9,18 @@ import Tickets from "../components/Tickets.astro";
 import Posters from "../components/Posters.astro";
 import Lineup from "../components/Lineup.astro";
 import Hero_img from "../components/Hero_img.astro";
+import Liste from "../components/Liste.astro";
+
+const data = await fetch(
+  "https://kemdlydyowtrowxxopgj.supabase.co/rest/v1/Karrusel",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtlbWRseWR5b3d0cm93eHhvcGdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjMyMDIsImV4cCI6MjAyNjMzOTIwMn0.m23hb_lr-l9cO0p8JuFmWXf9JyuhcfeYoV7rBGEU4wY",
+    },
+  }
+).then((res) => res.json());
 ---
 
 <html lang="en">
@@ -49,10 +61,18 @@ import Hero_img from "../components/Hero_img.astro";
           alt="Thursday program"
         />
       </Posters>
-      <Lineup />
-      <footer>
-        <Footer />
-      </footer>
+      <Lineup>
+        <section class="test">
+          {
+            data.map((artister) => {
+              return <Liste data={artister} />;
+            })
+          }
+        </section>
+        <footer>
+          <Footer />
+        </footer>
+      </Lineup>
     </main>
   </body>
 </html>
