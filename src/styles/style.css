@@ -36,6 +36,12 @@ body {
   
 }
 
+.hero_img{
+  background-image: url(/public/img/hero_img.jpg);
+  background-size: cover;
+}
+
+
 
 /* font og farver */
 
