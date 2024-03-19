@@ -3,7 +3,7 @@
 ---
 
 <footer>
-  <h3>Submit to our newsletter for the latest Karrusel news</h3>
+  <h3 class="footer_h3">Submit to our newsletter for the latest Karrusel news</h3>
   <div class="form">
     <form>
       <input type="text" id="email" placeholder="E-mail" />
@@ -12,10 +12,10 @@
   </div>
 
   <div class="footer">
-    <a href="/index">
+    <a href="/">
       <img class="logo_footer" src="/img/logo_karrusel.svg" alt="Logo" />
     </a>
-    <div>
+    <div class="footer_a">
       <a href="/about">About us</a>
       <br />
       <a href="/index">Line up</a>
@@ -29,13 +29,19 @@
   h3 {
     text-align: center;
   }
+  .footer_h3 {
+    font-size: 1rem;
+  }
   form {
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-
+    z-index: 1;
     margin: 0 auto;
+  }
+  .form {
+    z-index: 1;
   }
   .submit_btn {
     align-items: center;
@@ -58,10 +64,17 @@
     color: black;
     padding: 2px;
     margin: 0 auto;
-    width: 350px;
+    width: 250px;
     border-radius: 10px;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+  footer {
+    background-color: #00000050;
+    margin-top: 3rem;
+  }
+  .footer_a a {
+    color: white;
   }
 </style>

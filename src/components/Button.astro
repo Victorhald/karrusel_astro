@@ -2,14 +2,22 @@
 
 ---
 
-<button>
-  <slot />
-</button>
+<article>
+  <a href="/about">
+    <slot />
+  </a>
+</article>
+
 <style>
-  button {
+  a {
     padding: 1rem;
     border-radius: 8px;
     background-color: royalblue;
     color: white;
+  }
+  article {
+    text-align: center;
+    padding-bottom: 7rem;
+    padding-top: 3rem;
   }
 </style>

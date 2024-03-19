@@ -3,8 +3,27 @@
 ---
 
 <article>
-    
-    <h1>Karrusel</h1>
-    <slot />
-
+  <img src="/img/hero_img.jpg" alt="" />
+  <h1>Karrusel</h1>
 </article>
+
+<style>
+  article {
+    margin-bottom: 15rem;
+  }
+  img {
+    position: absolute;
+    aspect-ratio: 16/11;
+  }
+  h1 {
+    position: relative;
+    text-align: center;
+    align-self: center;
+  }
+
+  @media (min-width: 700px) {
+    article {
+      margin-bottom: 35rem;
+    }
+  }
+</style>

@@ -2,45 +2,108 @@
 import Tickets from "./Tickets.astro";
 ---
 
-<h2>Newsletter</h2>
-<section>
-  <h2>Equipment</h2>
-  <p>It’s not a rave untill you feel the bass in your heart and the lighting sends you to another solar system. We proudly partner with Funktion One, the leading sound system in the world, for the best possible experience for you & for our lovely artist.</p>
+<h2 class="hero">Newsletter</h2>
+
+<section class="grid_1">
+  <div class="grid_tekst_1">
+    <h2 class="equipment">Equipment</h2>
+    <p>It’s not a rave untill you feel the bass in your heart and the lighting sends you to another solar system. <br /> <br />We proudly partner with Funktion One, the leading sound system in the world, for the best possible experience for you & for our lovely artist.</p>
+  </div>
 
   <img src="/img/simon_lau.jpg" />
 </section>
-<section>
-  <h2>Style</h2>
-  <p>We embrace all clothing styles. Feel free to embrace our circus rave-ish style, or show us your own take. Karrusel is harrasment & judgment free, so go crazy & be yourself.</p>
-  <div class="newsletter_grid_1">
+
+<section class="grid_2">
+  <div class="a">
+    <h2 class="style">Style</h2>
+    <p>We embrace all clothing styles. Feel free to embrace our circus rave-ish style, or show us your own take. <br /><br /> Karrusel is harrasment & judgment free, so go crazy & be yourself.</p>
+  </div>
+
+  <div class="newsletter_grid_1" class="b">
     <img src="/img/paula_billede.jpg" />
     <div class="newsletter_grid_2">
-      <img src="/img/anders_billede.jpg" />
-      <img src="/img/elena_billede.jpg" />
+      <img class="hide" src="/img/anders_billede.jpg" />
+      <img class="hide" src="/img/elena_billede.jpg" />
     </div>
   </div>
 </section>
-<Tickets />
-<section>
-  <h2>Our commitment</h2>
-  <p>Our commitment has always been to create a festival that underlines our love for tech-style House & Disco, while welcoming everyone. We don’t care if it’s your first time or if you’re a die-hard tech lover - Bring love, and we will sort the rest.</p>
+
+<section class="grid_3">
+  <div class="grid_tekst_2">
+    <h2 class="commitment">Our <br /> commitment</h2>
+    <p>Our commitment has always been to create a festival that underlines our love for tech-style House & Disco, while welcoming everyone. <br /> <br />We don’t care if it’s your first time or if you’re a die-hard tech lover - Bring love, and we will sort the rest.</p>
+  </div>
+
   <img src="/img/mantas_hesthaven.jpg" />
 </section>
+<Tickets />
 <style>
+  body {
+    padding: 0.7rem;
+  }
   img {
     width: 100%;
   }
   h2 {
     text-align: center;
   }
-  .newsletter_grid_2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 
-    gap: 5px;
+  p {
+    max-width: 450px;
+    margin: 0 auto;
   }
-  .newsletter_grid_1 {
-    display: grid;
-    gap: 5px;
+  .hide {
+    display: none;
+  }
+  .hero {
+    padding-top: 6rem;
+  }
+  .equipment {
+    margin-top: 10%;
+  }
+
+  @media (min-width: 700px) {
+    .hero {
+      text-align: center;
+      padding-top: 3rem;
+    }
+    .grid_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .grid_tekst_1,
+    .grid_tekst_2 {
+      margin: auto;
+    }
+    .equipment {
+      margin-top: 10%;
+    }
+    .grid_2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      /* margin-top: 20px; */
+    }
+    .hide {
+      display: none;
+    }
+    .a {
+      order: 1;
+      margin: auto;
+    }
+    .style {
+      margin-top: 10%;
+    }
+    .grid_3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      /* margin-top: 20px; */
+    }
+    .commitment {
+      margin-top: 10%;
+      margin: auto;
+    }
+    h2 {
+      text-align: left;
+    }
   }
 </style>
