@@ -3,14 +3,7 @@
   margin: 0;
   padding: 0;
 }
-@font-face {
-  font-family: 'Nohemi';
-  src: 
-       url('/fonts/Nohemi-Regular-BF6438cc579d934') format('woff'); /* Older Browsers */
-       src: url(../fonts/Nohemi-Regular-BF6438cc579d934.woff);
-       font-weight: bold;
-       font-style: normal;
-}
+
 
 html {
   --font_color: rgba(243, 243, 243, 1);
