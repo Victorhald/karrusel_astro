@@ -22,7 +22,9 @@ body {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  padding:1rem;
+  line-height: 1.5;
+
+  
 }
 
 
@@ -41,9 +43,10 @@ h2 {
 h3 {
   font-size: 1.3rem;
 }
-p {
+p, a {
   font-size: 0.9rem;
   max-width: 65ch;
+  
 }
 
 @media only screen and (min-width: 600px) {
@@ -59,20 +62,13 @@ p {
   h3 {
     font-size: 3rem;
   }
-  p {
+  p, a {
     font-size: 1.5rem;
   }
 }
 
 /* --- */
 
-h1,
-h2,
-h3,
-h4,
-p {
-  color: white;
-}
 .nav-link {
   transition: 0.7s ease;
 }
