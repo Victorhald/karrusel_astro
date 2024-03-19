@@ -1,53 +1,6 @@
-<!-- <article>
-  <h2>Buy Tickets</h2>
-  <h2 class="varient">Buy Tickets</h2>
-  <h2>Buy Tickets</h2>
-  <h2 class="varient">Buy Tickets</h2>
-</article>
+---
 
-<style>
-  article {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; */
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
-    color: #FFF;
-    padding: 20px 0;
-  }
-
-  h2 {
-    color: blue;
-  }
-
-  h2, .varient{
-    display: inline-block;
-    position: absolute;
-    width: 100%;
-    /* Speed of the animation. */
-    animation: scrollText 5s linear infinite;
-  }
-
-  .varient {
-    color: lightblue;
-  }
-
-  @keyframes scrollText {
-    from {
-      transform: translateX(1000%);
-    }
-    to {
-      transform: translateX(-1000%);
-    }
-  }
-
- 
-
-</style> -->
-
-
-
+---
 
 <article>
   <div class="scroll-container">
@@ -69,8 +22,6 @@
     <h2>Buy Tickets</h2>
     <h2 class="variant">Buy Tickets</h2>
     <h2>Buy Tickets</h2>
-   
-   
   </div>
 </article>
 
@@ -79,33 +30,33 @@
     overflow: hidden;
     position: relative;
     white-space: nowrap;
-    color: #FFF;
+    color: #fff;
     padding: 20px 0;
-    margin-bottom: 5rem ;
+    margin-bottom: 5rem;
   }
 
   .scroll-container {
     display: flex;
     animation: scrollText 11s linear infinite;
   }
-  h2, .variant {
+  h2,
+  .variant {
     color: blue;
     margin: 0 100px; /* Adjust spacing between items */
     font-size: 2rem;
   }
 
-
   @media (min-width: 700px) {
-
-    article{
-      margin-bottom: 10rem ;
+    article {
+      margin-bottom: 10rem;
     }
-    h2, .variant {
-    color: blue;
-    margin: 0 100px; /* Adjust spacing between items */
-    font-size: 5rem;
-    text-transform: capitalize;
-  }
+    h2,
+    .variant {
+      color: blue;
+      margin: 0 100px; /* Adjust spacing between items */
+      font-size: 5rem;
+      text-transform: capitalize;
+    }
   }
 
   .variant {
