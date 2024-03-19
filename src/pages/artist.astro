@@ -34,7 +34,15 @@ console.log(data);
   <body>
     <header><Burger /></header>
 
-    <h1>Astro</h1>
-    <main></main>
+    <main>
+      <section class="test">
+        {
+          data.map((show) => {
+            return <Liste data={show} />;
+          })
+        }
+        <Liste />
+      </section>
+    </main>
   </body>
 </html>
