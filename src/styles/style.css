@@ -3,6 +3,15 @@
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: 'Nohemi';
+  src: 
+       url('../fonts/Nohemi-Regular-BF6438cc579d934.woff') format('woff'); /* Older Browsers */
+       src: url(../fonts/Nohemi-Regular-BF6438cc579d934.woff);
+       font-weight: bold;
+       font-style: normal;
+}
+
 html {
   --font_color: rgba(243, 243, 243, 1);
   --headers_font: 
@@ -32,16 +41,19 @@ body {
 
 h1 {
   font-size: 3.5rem;
-  
+  font-family: Nohemi;
+  text-transform: uppercase;
 }
 
 h2 {
   font-size: 2rem;
   text-transform: uppercase;
+  font-family: Nohemi;
   
 }
 h3 {
   font-size: 1.3rem;
+  font-family: Nohemi;
 }
 p, a {
   font-size: 0.9rem;
