@@ -38,21 +38,16 @@ import Tickets from "./Tickets.astro";
 </section>
 <Tickets />
 <style>
+  body {
+    padding: 0.7rem;
+  }
   img {
     width: 100%;
   }
   h2 {
     text-align: center;
   }
-  /*.newsletter_grid_2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .newsletter_grid_1 {
-    display: grid;
-    gap: 5px;
-  }
-  */
+
   p {
     max-width: 450px;
     margin: 0 auto;
@@ -60,10 +55,17 @@ import Tickets from "./Tickets.astro";
   .hide {
     display: none;
   }
+  .hero {
+    padding-top: 6rem;
+  }
+  .equipment {
+    margin-top: 10%;
+  }
 
   @media (min-width: 700px) {
     .hero {
       text-align: center;
+      padding-top: 3rem;
     }
     .grid_1 {
       display: grid;
