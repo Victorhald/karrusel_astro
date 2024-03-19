@@ -8,16 +8,42 @@
 </section>
 <div class="scroll_container">
   <div class="gallery">
+    
+    <div>
     <img src="/img/peggy_gou.jpg" />
     <img src="/img/andreas_billede.jpg" />
+    </div>
+
+    <div>
     <img src="/img/mckenzie_billede.jpg" />
     <img src="/img/mantas_24.jpg" />
-    <img src="/img/mantas_36.jpg" />
-    <img src="/img/mantas_36.jpg" />
-  </div>
+    </div>
+   
+    <div>
+      <img src="/img/mantas_36.jpg" />
+      <img src="/img/paula_billede.jpg" />
+    </div>
+
+    <div>
+      <img src="/img/peggy_gou.jpg" />
+      <img src="/img/andreas_billede.jpg" />
+      </div>
+  
+      <div>
+      <img src="/img/mckenzie_billede.jpg" />
+      <img src="/img/mantas_24.jpg" />
+      </div>
+     
+      <div>
+        <img src="/img/mantas_36.jpg" />
+        <img src="/img/paula_billede.jpg" />
+      </div>
+
+    
+   
 </div>
 
-<h3>Freedom, Inclusion, Community & Dancing!</h3>
+<!-- <h3>Freedom, Inclusion, Community & Dancing!</h3>
 
 <section>
   <h3>A safe ride on the Karrusel</h3>
@@ -32,7 +58,7 @@
   <h3>Sustainability</h3>
   <p>We strive to be as sustainable as possible - if we don't, who will?</p>
   <p>We re-use productions and prints whenever we can Food and drinks are served in reusable materials - no straws</p>
-</section>
+</section> -->
 
 <style>
   body {
@@ -46,23 +72,31 @@
     padding-top: 1.5rem;
   }
   img {
+    width: 100%;
+  }
+
+
+.scroll_container{
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+
+  .gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr   ;
+    animation: scrollText 11s linear infinite;
   }
 
 
 
-
-  /* .gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-  } */
-  /* .gallery_1 {
-    display: grid;
-    gap: 5px;
-  } */
-  .gallery {
-    display: grid;
-
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+  @keyframes scrollText {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 </style>
