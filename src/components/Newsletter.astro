@@ -39,7 +39,7 @@ import Tickets from "./Tickets.astro";
 <Tickets />
 <style>
   body {
-    /* padding: 0.7rem; */
+    padding: 1rem;
   }
   img {
     width: 100%;
@@ -56,17 +56,22 @@ import Tickets from "./Tickets.astro";
     display: none;
   }
   .hero {
-    margin-top: 3rem;
-    padding: 10rem;
+    padding-bottom: 3rem;
+    padding-top: 6rem;
   }
   .equipment {
     margin-top: 10%;
   }
 
   @media (min-width: 700px) {
+
+    body{
+      padding: 0;
+    }
     .hero {
       text-align: center;
-      padding-top: 3rem;
+      padding: 10rem
+    
     }
     .grid_1 {
       display: grid;
