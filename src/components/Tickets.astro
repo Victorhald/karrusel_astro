@@ -35,15 +35,20 @@
     margin-bottom: 5rem;
   }
 
+
   .scroll-container {
     display: flex;
     animation: scrollText 11s linear infinite;
   }
   h2,
   .variant {
-    color: blue;
+    color: var(--font_color);
     margin: 0 100px; /* Adjust spacing between items */
     font-size: 2rem;
+  }
+
+  h2, .variant:hover{
+    cursor: pointer;
   }
 
   @media (min-width: 700px) {
@@ -52,7 +57,7 @@
     }
     h2,
     .variant {
-      color: blue;
+      color: var(--font_color);
       margin: 0 100px; /* Adjust spacing between items */
       font-size: 5rem;
       text-transform: capitalize;
@@ -60,7 +65,7 @@
   }
 
   .variant {
-    color: lightblue;
+    color: var(--color_ticket);;
   }
 
   @keyframes scrollText {
