@@ -32,7 +32,7 @@ const { data } = Astro.props;
       }
     </article>
   </a>
-
+  
   <a href={`artister/${data.slug}`}>
     <article>
       {
@@ -45,6 +45,7 @@ const { data } = Astro.props;
         )
       }
     </article>
+  </a>
 
     <style>
       article {
@@ -57,6 +58,7 @@ const { data } = Astro.props;
         grid-template-columns: 1fr 1fr 1fr;
       }
     </style>
+  
 
     <style>
       article {
@@ -71,7 +73,6 @@ const { data } = Astro.props;
     </style>
   </a>
 </section>
-
 <style>
   article {
     text-align: center;
@@ -83,3 +84,4 @@ const { data } = Astro.props;
     grid-template-columns: 1fr 1fr 1fr;
   }
 </style>
+
