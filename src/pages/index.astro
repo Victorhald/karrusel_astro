@@ -1,26 +1,5 @@
 ---
 import "../styles/style.css";
-
-import Forside_om_os from "../components/Forside_om_os.astro";
-import Footer from "../components/Footer.astro";
-import Button from "../components/Button.astro";
-import Burger from "../components/Burger.astro";
-import Tickets from "../components/Tickets.astro";
-import Posters from "../components/Posters.astro";
-import Lineup from "../components/Lineup.astro";
-import Hero_img from "../components/Hero_img.astro";
-import Liste from "../components/Liste.astro";
-
-const data = await fetch(
-  "https://kemdlydyowtrowxxopgj.supabase.co/rest/v1/Karrusel",
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtlbWRseWR5b3d0cm93eHhvcGdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjMyMDIsImV4cCI6MjAyNjMzOTIwMn0.m23hb_lr-l9cO0p8JuFmWXf9JyuhcfeYoV7rBGEU4wY",
-    },
-  }
-).then((res) => res.json());
 ---
 
 <html lang="en">
@@ -31,48 +10,35 @@ const data = await fetch(
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
     <title>Astro</title>
   </head>
   <body>
     <header>
-      <Burger />
+      <burger />
     </header>
-
     <main>
-      <Hero_img />
-      <Forside_om_os />
-      <Button>Read more</Button>
-
-      <Tickets />
-      <Posters>
-        <img
-          class="poster"
-          src="/thursday-poster.webp"
-          alt="Thursday program"
-        />
-        <img class="poster" src="/friday-poster.webp" alt="Thursday program" />
-        <img
-          class="poster"
-          src="/saturday-poster.webp"
-          alt="Thursday program"
-        />
-      </Posters>
-      <Lineup>
-        <section class="test">
-          {
-            data.map((artister) => {
-              return <Liste data={artister} />;
-            })
-          }
-        </section>
-        <footer>
-          <Footer />
-        </footer>
-      </Lineup>
+      <a class="landing_page" href="/frontpage">
+        <img class="logo" src="/public/img/logo_karrusel.svg" alt="">
+        <img class="karussel" src="/public/img/karussel_landing.svg" alt="">
+      </a>
     </main>
   </body>
 </html>
+
+<style>
+  body{
+    background-image: url("/public/landing_page.jpg");
+    background-size: cover;
+  }
+
+
+img{
+  margin: auto;
+}
+
+.logo{
+width: 25rem;
+}
+
+</style>
