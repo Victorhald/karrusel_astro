@@ -18,6 +18,7 @@ const { data } = Astro.props;
       }
     </article>
   </a>
+
   <a href={`artister/${data.slug}`}>
     <article>
       {
@@ -29,47 +30,6 @@ const { data } = Astro.props;
           <p>Loading...</p>
         )
       }
-
-      <a href={`artister/${data.slug}`}>
-        <article>
-          {
-            data ? (
-              <>
-                <p>{data.artist}</p>
-              </>
-            ) : (
-              <p>Loading...</p>
-            )
-          }
-        </article>
-      </a>
-
-      <a href={`artister/${data.slug}`}>
-        <article>
-          {
-            data ? (
-              <>
-                <p>{data.artist}</p>
-              </>
-            ) : (
-              <p>Loading...</p>
-            )
-          }
-        </article>
-      </a>
-      <a href={`artister/${data.slug}`}>
-        <article>
-          {
-            data ? (
-              <>
-                <p>{data.artist}</p>
-              </>
-            ) : (
-              <p>Loading...</p>
-            )
-          }
-        </article>
-      </a>
     </article>
 
     <style>
@@ -98,3 +58,17 @@ const { data } = Astro.props;
     </style>
   </a>
 </section>
+<<<<<<< HEAD =======
+
+<style>
+  article {
+    text-align: center;
+    line-height: 3rem;
+    color: var(--font_color);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+</style>
+>>>>>>> 1a7f8313764d87add6591edf21f9a9110b4dc858
