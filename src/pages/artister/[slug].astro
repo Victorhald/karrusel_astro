@@ -1,16 +1,12 @@
 ---
 import Arrow from "../../components/Arrow.astro";
 export async function getStaticPaths() {
-  const data = await fetch(
-    "https://kemdlydyowtrowxxopgj.supabase.co/rest/v1/Karrusel",
-    {
-      method: "GET",
-      headers: {
-        apikey:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtlbWRseWR5b3d0cm93eHhvcGdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjMyMDIsImV4cCI6MjAyNjMzOTIwMn0.m23hb_lr-l9cO0p8JuFmWXf9JyuhcfeYoV7rBGEU4wY",
-      },
-    }
-  ).then((response) => response.json());
+  const data = await fetch("https://kemdlydyowtrowxxopgj.supabase.co/rest/v1/Karrusel", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtlbWRseWR5b3d0cm93eHhvcGdqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA3NjMyMDIsImV4cCI6MjAyNjMzOTIwMn0.m23hb_lr-l9cO0p8JuFmWXf9JyuhcfeYoV7rBGEU4wY",
+    },
+  }).then((response) => response.json());
 
   return data.map((artist) => {
     return {
@@ -38,12 +34,30 @@ console.log(myData);
 // }
 ---
 
-<h1>{myData.artist}</h1>
-<h2>{myData.playing_date}</h2>
-<h2>{myData.scene}</h2>
-<p>{myData.description}</p>
+<div>
+  <div class="grid_1_artist">
+    <h1>{myData.artist}</h1>
+    <h2>{myData.playing_date}</h2>
+    <h2>{myData.scene}</h2>
+    <p>{myData.description}</p>
+    <div><img src={"/img/artist_kort/" + myData.image} alt="billede af artist" /></div>
+  </div>
+  <style>
+    body {
+      background-image: url(/public/baggrund_img4.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
 
-
-<style>
-
-</style>
+    img {
+      border: 1px solid white;
+      max-width: 500px;
+    }
+    .grid_1_artist {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  </style>
+</div>
